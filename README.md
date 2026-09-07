@@ -2,7 +2,7 @@
 
 ## EternalBlueC
 EternalBlue suite remade in C/C++ which includes:
-- MS17-010 Exploit ( Contains DoublePulsar )
+- MS17-010 Exploit ( Installs DoublePulsar, not any other payload)
 - EternalBlue/MS17-010 vulnerability detector
 - DoublePulsar detector
 - DoublePulsar Upload DLL 
