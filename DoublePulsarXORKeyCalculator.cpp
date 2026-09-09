@@ -105,7 +105,7 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 	server.sin_family = AF_INET;
-	server.sin_addr.s_addr = inet_addr("192.168.0.9");
+	server.sin_addr.s_addr = inet_addr(argv[1]);
 	server.sin_port = htons((USHORT)445);
 	ret = connect(sock, (struct sockaddr*)&server, sizeof(server));
 
@@ -119,7 +119,7 @@ int main(int argc, char* argv[])
 	recv(sock, (char*)recvbuff, sizeof(recvbuff), 0);
 
 	//copy our returned userID value from the previous packet to the TreeConnect request packet
-	userid = *(WORD*)(recvbuff + 0x20);       //get userid
+	userid = *(WORD*)(recvbuff + 0x20);
 
 	//output windows version to the screen
 	printf("Remote OS: ");
